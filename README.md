@@ -1,4 +1,4 @@
 # lde_harop
 # Luis de Haro Parames
-> [!DESCRIPTION]
+> [!NOTE]
 > Esta es mi descripción.
