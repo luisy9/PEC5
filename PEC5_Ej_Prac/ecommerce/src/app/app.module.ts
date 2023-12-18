@@ -8,11 +8,12 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { routing } from './app.routes';
+import { ArticleNewReactiveComponent } from './article-new-reactive/article-new-reactive.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, ArticleComponent, ArticleListComponent, NavbarComponent],
+  declarations: [AppComponent, ArticleComponent, ArticleListComponent, NavbarComponent, ArticleNewReactiveComponent],
   imports: [BrowserModule, BrowserAnimationsModule, MatIconModule, MatButtonModule, routing],
   bootstrap: [AppComponent]
 })
