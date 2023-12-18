@@ -7,12 +7,13 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { routing } from './app.routes';
 
 
 
 @NgModule({
   declarations: [AppComponent, ArticleComponent, ArticleListComponent, NavbarComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MatIconModule, MatButtonModule],
+  imports: [BrowserModule, BrowserAnimationsModule, MatIconModule, MatButtonModule, routing],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
