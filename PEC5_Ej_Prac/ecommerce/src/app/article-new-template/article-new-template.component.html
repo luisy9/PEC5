@@ -1,1 +1,25 @@
-<p>article-new-template works!</p>
+<div class="form-box">
+  <form [formGroup]="article" (ngSubmit)="onSubmit()">
+    <h2 class="text-center">Create Wine</h2>
+    <div class="form-control">
+      <input type="text" name="name" id="" formControlName="name" placeholder="name wine" />
+    </div>
+
+    <div class="form-control">
+      <input type="number" name="price" id="" formControlName="number" placeholder="name price" />
+    </div>
+
+    <div class="form-control">
+      <input type="text" name="url" id="" formControlName="url" placeholder="name url" />
+    </div>
+
+    <div class="form-control">
+      <label for="onSale">On Sale</label>
+      <input type="checkbox" name="onSale" id="onSale" formControlName="onSale" />
+    </div>
+
+    <div class="">
+      <button type="submit" class="btn btn-primary" [disabled]="article.invalid">Submit</button>
+    </div>
+  </form>
+</div>

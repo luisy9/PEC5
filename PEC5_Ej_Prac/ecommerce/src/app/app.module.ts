@@ -9,12 +9,14 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { routing } from './app.routes';
 import { ArticleNewReactiveComponent } from './article-new-reactive/article-new-reactive.component';
+import { ArticleNewTemplateComponent } from './article-new-template/article-new-template.component';
+import { FormGroup } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [AppComponent, ArticleComponent, ArticleListComponent, NavbarComponent, ArticleNewReactiveComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MatIconModule, MatButtonModule, routing],
+  declarations: [AppComponent, ArticleComponent, ArticleListComponent, NavbarComponent, ArticleNewReactiveComponent, ArticleNewTemplateComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, MatIconModule, MatButtonModule, routing, FormGroup],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
