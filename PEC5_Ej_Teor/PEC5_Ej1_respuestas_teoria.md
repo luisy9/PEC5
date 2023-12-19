@@ -37,3 +37,36 @@ b. ¿Qué ventajas aportan los FormGroup en la composición de formularios?
         - Mediante el FormGroup puedes reaccionar a eventos como cambios en los valores o cambios en el estado de la validacion.
         - Facilita el acceso a los valores de los campos del formulario.
         - Se integra bien con el FormControl, puedes tener formularios dentro de formularios.
+
+
+# Ejercicio 4
+
+a. ¿Qué son, para qué sirven y cómo se utilizan FormControl, FormGroup y
+FormBuilder?
+    - FormControl: Representa un campo de entrada de el formulario de texto, almacena el valor actual del control y proporciona funciones y eventos para poder
+    interactuar con el.
+    ```
+    const myControl = new FormControl('valorInicial');
+    ```
+
+    - FormGroup: El FormGroup agrupa varios FormControl en un formulario y permite gestionar y validar un conjunto de FormControls como una unidad.
+    ```
+    const myForm = new FormGroup({
+        username: new FormControl(''),
+        password: new FormControl('')
+    });
+    ```
+
+    - FormBuilder: Sirve para crear instacias de FormControl, FormGroup y FormArray. Simplifica la construccion de formularios.
+    ```
+    const formBuilder = new FormBuilder();
+    const myFormGroup = formBuilder.group({
+        username: [''],
+        passowrd: ['']
+    });
+    ```
+
+b. Busca en la página oficial de Angular (o utiliza un recurso de O’Reilly) en el que
+se especifiquen todos los validadores que incluye Angular para ser utilizados en
+los formularios reactivos. Construye una tabla de resumen de estos.
+    - 

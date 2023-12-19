@@ -30,13 +30,11 @@
           required
           ngModel
         />
-        @if(price.dirty || article.submitted){ 
-          @if(price.errors?.['required']){
-            <div id="name" class="invalid-feedback">The price is required</div>
-          } @else {
-            <div id="name" class="valid-feedback">Valid</div>
-          }
-        }
+        @if(price.dirty || article.submitted){ @if(price.errors?.['required']){
+        <div id="name" class="invalid-feedback">The price is required</div>
+        } @else {
+        <div id="name" class="valid-feedback">Valid</div>
+        } }
       </div>
 
       <div class="">
@@ -52,11 +50,10 @@
           placeholder="name url"
           required
         />
-        @if(url.dirty || article.submitted){
-        @if(url.errors?.['required']){
-        <span class="error">Campo requerido</span>
+        @if(url.dirty || article.submitted){ @if(url.errors?.['required']){
+        <span class="invalid-feedback">The url is required</span>
         }@else if (url.errors?.['pattern']) {
-        <span class="error">No es una url valida</span>
+        <span class="invalid-feedback">No es una url valida</span>
         } }
       </div>
 
