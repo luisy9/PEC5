@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup} from '@angular/forms';
-
+import { Article } from '../model/article';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-article-new-template',
   templateUrl: './article-new-template.component.html',
@@ -10,19 +10,20 @@ import { FormGroup} from '@angular/forms';
 
 export class ArticleNewTemplateComponent {
 
-  article: FormGroup;
+  public article: Article;
 
   constructor() {
-    this.article = new FormGroup({
-      name: new FormGroup(''),
-      number: new FormGroup(''),
-      url: new FormGroup(''),
-      onSale: new FormGroup('')
-    });
+    this.article = new Article('', 0, '', false);
   }
 
-  onSubmit() {
-
+  createArticle(article: NgForm): any {
+    console.log(article);
+    if(article.valid){
+      console.log('es valido');
+    } else {
+      console.log(article.value)
+      console.log('no es valido');
+    }
   }
 
 }
