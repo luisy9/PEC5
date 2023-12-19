@@ -70,4 +70,5 @@ FormBuilder?
 se especifiquen todos los validadores que incluye Angular para ser utilizados en
 los formularios reactivos. Construye una tabla de resumen de estos.
 
-    - Validadores Basicos: Required > Es un campo que es obligatorio.
+#### Validadores Basicos:
+        - Required > Es un campo que es obligatorio.
