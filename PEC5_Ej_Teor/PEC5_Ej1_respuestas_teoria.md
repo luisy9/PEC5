@@ -1,10 +1,10 @@
 # Ejercicio 1 – Preguntas teóricas sobre formularios Angular
-a. ¿Cuáles son las principales diferencias entre formularios dirigidos por template y formularios reactivos?
+### a. ¿Cuáles son las principales diferencias entre formularios dirigidos por template y formularios reactivos?
     - Las diferencias son obvias entre estos dos tipos de formularios, si necesitas simpleza en los formularios y una implementacion mas rapida, la opcion de formularios dirigidos por templates son la mejor opcion
         pero en cambio si quiere mas control sobre el formulario, hacer validaciones, control sobre la logica, los reactivos son mas apropiados.
     - Los formularios reactivos te dan una escalabilidad mejor, ya que tiene mayor flexibilidad para los cambios y aumentar sus funcionalidades.
 
-b. ¿Qué son, para qué sirven y cómo se utilizan las directivas ngModel y
+### b. ¿Qué son, para qué sirven y cómo se utilizan las directivas ngModel y
 ngModelChange?
     - La directiva ngModel, es una directiva que se utiliza para crear una comunicacion bidireccional entre formulario del template y el componente, con la prop de el formulario y la prop del componente.
     ```
@@ -17,7 +17,7 @@ ngModelChange?
             console.log(nuevoValor);
         }
         ```
-c. ¿Qué son, cuáles son y para qué sirven los estados en los formularios dirigidos
+### c. ¿Qué son, cuáles son y para qué sirven los estados en los formularios dirigidos
 por templates?
     - Pristine: El formulario o control está en su estado original, sin modificaciones. Y esto se aplica a todo  el formulario (form.pristine , control.pristine);
 
@@ -31,7 +31,7 @@ por templates?
 
     - Errors: Un objeto que contiene errores de validación asociados con el control o formulario. Se utiliza para acceder a errores especificos en la validacion. (control.errors);
 
-b. ¿Qué ventajas aportan los FormGroup en la composición de formularios?
+### b. ¿Qué ventajas aportan los FormGroup en la composición de formularios?
     - Proporciona una forma de organizar y gestionar varios controles relacionados en un formulario.
         -  Proporciona métodos y propiedades para gestionar los valores y el estado del grupo de controles. Puedes obtener y establecer valores, así como comprobar el estado de validación del grupo.
         - Mediante el FormGroup puedes reaccionar a eventos como cambios en los valores o cambios en el estado de la validacion.
@@ -41,7 +41,7 @@ b. ¿Qué ventajas aportan los FormGroup en la composición de formularios?
 
 # Ejercicio 4
 
-a. ¿Qué son, para qué sirven y cómo se utilizan FormControl, FormGroup y
+### a. ¿Qué son, para qué sirven y cómo se utilizan FormControl, FormGroup y
 FormBuilder?
     - FormControl: Representa un campo de entrada de el formulario de texto, almacena el valor actual del control y proporciona funciones y eventos para poder
     interactuar con el.
