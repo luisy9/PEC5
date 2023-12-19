@@ -69,6 +69,21 @@ FormBuilder?
 ### b. Busca en la página oficial de Angular (o utiliza un recurso de O’Reilly) en el que
 se especifiquen todos los validadores que incluye Angular para ser utilizados en
 los formularios reactivos. Construye una tabla de resumen de estos.
-
+| Validador  | Descripción                            |
+|----------  | -------------                          |
+| required   | Es un campo que es obligatorio         |
+| minLength  | Comprueba si el valor tiene al menos N caracteres |
+| maxLength  | Comprueba si el valor tiene como máximo N caracteres |
+| patter     | Son campos que solo permiten una expresion regular determinada |
+| min        | Establece el valor minimo de numeros |
+| max        | Establece el valor maximo de numeros |
+| Validador personalizado | Son validadores personalizados |
+<!-- 
 #### Validadores Basicos:
         - Required > Es un campo que es obligatorio.
+        - minLength y maxLength > Son para campos que tienen que tener o un maximo de caracteres o un minimo de caracteres.
+        - patter > Son campos que solo permiten una expresion regular determinada.
+#### Validadores Numericos:
+        - min y max > Establece el valor minimo o el valor maximo de numeros.
+#### Validadores Personalizados:
+        -  -->
