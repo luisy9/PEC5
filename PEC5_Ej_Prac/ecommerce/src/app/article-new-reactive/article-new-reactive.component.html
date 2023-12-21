@@ -1,27 +1,27 @@
 <div class="form-box-reactive">
-  <form>
+  <form [formGroup]="myForm" (submit)="submitApplication()">
     <h2>Form Reactive</h2>
+    Value: {{ myForm.value | json }}
     <div class="div-form">
       <div class="div-control">
-        
-        <input type="text" placeholder="nombre" class="input-key" />
+        <input type="text" placeholder="nombre" class="input-key" formControlName="name" />
       </div>
 
       <div class="div-control">
-        <input type="number" placeholder="precio" class="input-key" />
+        <input type="number" placeholder="precio" class="input-key"formControlName="price" />
       </div>
 
       <div class="div-control">
-        <input type="text" placeholder="url img" class="input-key" />
+        <input type="text" placeholder="url img" class="input-key" formControlName="urlImg" />
       </div>
 
       <div class="div-control div-control-checkbox">
         <label for="isOnSale" class="isOnSale">En venta</label>
-        <input type="checkbox" id="isOnSale" class="checkboxIsOnSale"/>
+        <input type="checkbox" id="isOnSale" class="checkboxIsOnSale" formControlName="isOnSale" />
       </div>
 
       <div class="div-control">
-        <button type="submit">Crear</button>
+        <button type="submit" class="buttonSubmit">Crear</button>
       </div>
     </div>
   </form>
