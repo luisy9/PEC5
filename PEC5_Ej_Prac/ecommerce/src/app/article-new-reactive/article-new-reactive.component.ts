@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+import { MyValidations } from '../utils/my-validations';
+
 @Component({
   selector: 'app-article-new-reactive',
   templateUrl: './article-new-reactive.component.html',
@@ -14,20 +16,19 @@ export class ArticleNewReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.myForm = this.fn.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required, MyValidations.nameArticleValidator]],
       price: [null, [Validators.required, Validators.min(0.1)]],
       urlImg: ['', [Validators.required, Validators.pattern("^(https?):\/\/[a-zA-Z0-9]+(\.[a-zA-Z]{2,3})$")]],
       isOnSale: [false]
     });
-
-    this.myForm.valueChanges.subscribe(console.log);
   }
-
 
   onSubmit(): void {
-    console.log('Submited form', this.myForm.value?.email);
+    console.log('Submited form', this.myForm.value);
   }
 
+
+  //getters
   get name() {
     return this.myForm.get('name');
   }

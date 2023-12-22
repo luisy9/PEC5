@@ -62,3 +62,7 @@ button {
   width: 20px;
   border: none;
 }
+
+.error-msg {
+  color: red;
+}
