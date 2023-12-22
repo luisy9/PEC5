@@ -16,15 +16,31 @@ export class ArticleNewReactiveComponent implements OnInit {
     this.myForm = this.fn.group({
       name: ['', [Validators.required]],
       price: [null, [Validators.required, Validators.min(0.1)]],
-      urlImg: ['', [Validators.required, Validators.pattern("^(https?):\/\/[a-zA-Z0-9]+(\.[a-zA-Z]{2,3})$)")]],
+      urlImg: ['', [Validators.required, Validators.pattern("^(https?):\/\/[a-zA-Z0-9]+(\.[a-zA-Z]{2,3})$")]],
       isOnSale: [false]
     });
 
     this.myForm.valueChanges.subscribe(console.log);
   }
 
-  submitApplication() {
-    
+
+  onSubmit(): void {
+    console.log('Submited form', this.myForm.value?.email);
   }
 
+  get name() {
+    return this.myForm.get('name');
+  }
+
+  get price() {
+    return this.myForm.get('price');
+  }
+
+  get urlImg() {
+    return this.myForm.get('urlImg');
+  }
+
+  get isOnSale() {
+    return this.myForm.get('isOnSale');
+  }
 }
