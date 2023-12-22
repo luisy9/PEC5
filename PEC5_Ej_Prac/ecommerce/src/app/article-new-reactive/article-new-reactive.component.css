@@ -34,6 +34,7 @@ h2 {
   margin: 4px;
   height: 35px;
   background-color: #454257;
+  color: white;
 }
 
 button {
@@ -66,3 +67,4 @@ button {
 .error-msg {
   color: red;
 }
+
