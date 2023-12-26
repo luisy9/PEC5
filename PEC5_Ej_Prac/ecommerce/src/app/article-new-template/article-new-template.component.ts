@@ -17,11 +17,10 @@ export class ArticleNewTemplateComponent {
   }
 
   createArticle(article: NgForm): any {
-    console.log(article);
-    if(article.valid){
-      console.log('es valido');
+    if (article.valid) {
+      console.log(article.value);
     } else {
-      console.log(article.value)
+      console.log(article.value);
       console.log('no es valido');
     }
   }
